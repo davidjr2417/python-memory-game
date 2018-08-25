@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+   <link rel="stylesheet" type="text/css" href="/static/css/style.css"><link rel="stylesheet" type="text/css" href="/static/css/login.css">
+ 
+</head>
+<body>
+  <nav>
+      <ul>
+        <li><a href="/">About Me (Featured Project or 2)</a></li>
+        <li>Skills/Accomplishments<a href="/matching_game.html">Portfolio</a></li>
+        <li><a href="/">Contact</a></li>
+        <li><a href="http://www.adhamdannaway.com">Example</a></li>
+      </ul>
+
+      <!-- A Search form is another commmon non-linear way to navigate through a website. -->
+
+      <form>
+        <input type="search" name="q" placeholder="Search query">
+        <input type="submit" value="Go!">
+      </form>
+    </nav>
+ {% set count = 1 %}
+      {% for user in users %}
+      <p style="border:2px solid gold; background-color:red; display: absolute;">
+        {{ count }}
+        {% set count = count + 1 %}
+        <span class="name"> 
+          {% set names = user[1] %}
+           {{names}}
+           {{names}}
+        </span>  
+         <pre class="email"> 
+          {% set names = user[3] %}
+          {{user[3]}}
+        </pre>
+      </p>
+      {% endfor %}
+<div class="cont">
+  <div class="form sign-in">
+    <h2>Welcome back,</h2>
+    <label>
+      <span>Name</span>
+      <input type="text" value="{{name}}" />
+    </label>
+    <label>
+      <label>
+      <span>Email</span>
+      <input type="email" value="{{email}}" />
+    </label>
+    <label>
+      <span>Password</span>
+      <input type="password" />
+    </label>
+    <p class="forgot-pass">Forgot password?</p>
+    <button type="button" class="submit">Sign In</button>
+    <button type="button" class="fb-btn">Connect with <span>facebook</span></button>
+      
+  </div>
+ 
+  <div class="sub-cont">
+    <div class="img">
+      <div class="img__text m--up">
+        <p>Sign up and discover great amount of new opportunities!</p>
+      </div>
+      <div class="img__text m--in">
+        <h2>One of us?</h2>
+        <p>If you already has an account, just sign in. We've missed you!</p>
+      </div>
+      <div class="img__btn">
+        <span class="m--up">Sign Up</span>
+        <span class="m--in">Sign In</span>
+      </div>
+    
+    </div>
+
+    <form method="post" class="form sign-up">
+     <h2>Sign Up</h2>
+         <label>
+        <span>Name</span>
+        <input type="text" name="name" />
+      </label>
+      <label>
+        <span>Email</span>
+       <input  type="email" name="email" />
+      </label>
+       <label>
+        <span>Password</span>
+        <input type="password" />
+      </label> 
+       <div style="color:red;" class="error">{{error}}</div>
+    <!--   <label>
+        <span>Confirm Password</span>
+        <input type="password" />
+      </label> -->
+      <button class="submit" >ASign Up</button>
+    </form>
+
+   
+<a href="https://dribbble.com/shots/3306190-Login-Registration-form" target="_blank" class="icon-link">
+  <img src="http://icons.iconarchive.com/icons/uiconstock/socialmedia/256/Dribbble-icon.png">
+</a>
+<a href="https://twitter.com/NikolayTalanov" target="_blank" class="icon-link icon-link--twitter">
+  <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png">
+</a>
+<script type="text/javascript" src="../static/js/login.js"></script>
+
+  </body>
+</html>
+         
+ 
